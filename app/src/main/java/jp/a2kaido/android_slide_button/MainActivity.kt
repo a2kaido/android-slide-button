@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MotionEvent
 import android.view.View
+import android.widget.HorizontalScrollView
 import android.widget.RelativeLayout
 import android.widget.TextView
 
@@ -25,6 +26,12 @@ class MainActivity : AppCompatActivity(), View.OnTouchListener {
         findViewById(R.id.slideText) as TextView
     }
 
+    val horizon: HorizontalScrollView by lazy {
+        (findViewById(R.id.horizontalScrollView) as HorizontalScrollView).apply {
+            isSmoothScrollingEnabled = false
+        }
+    }
+
     var preDx: Int = 0
     var newDx: Int = 0
     var initialWidth: Int = 0
@@ -34,6 +41,12 @@ class MainActivity : AppCompatActivity(), View.OnTouchListener {
         setContentView(R.layout.activity_main)
 
         slideView.setOnTouchListener(this)
+    }
+
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+
+        horizon.fullScroll(HorizontalScrollView.FOCUS_RIGHT)
     }
 
     override fun onTouch(v: View?, event: MotionEvent?): Boolean {

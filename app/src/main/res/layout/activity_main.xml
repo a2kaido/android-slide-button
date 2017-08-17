@@ -11,13 +11,80 @@
         android:layout_margin="32dp"
         android:background="@drawable/radius"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
-        tools:layout_editor_absoluteY="223dp"
-        tools:layout_editor_absoluteX="0dp">
+        android:layout_height="64dp">
 
         <TextView
             android:id="@+id/paytext"
-            android:paddingStart="36dp"
+            android:text="UNLOCK"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/temp"
+                    android:layout_width="344dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/radius2">
+
+                    <TextView
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#ffffff"
+                        android:gravity="center"
+                        android:text="UNLOCK"
+                        android:textSize="24dp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:layout_width="72dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="match_parent"
+                        android:textColor="#ffffff"
+                        android:gravity="center"
+                        android:text="＞"
+                        android:textSize="24dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <View
+                    android:clickable="false"
+                    android:background="#00000000"
+                    android:id="@+id/clearView2"
+                    android:layout_toRightOf="@id/temp"
+                    android:layout_toEndOf="@id/temp"
+                    android:layout_width="280dp"
+                    android:layout_height="match_parent" />
+
+            </RelativeLayout>
+
+        </HorizontalScrollView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_margin="32dp"
+        android:background="@drawable/radius"
+        android:layout_width="match_parent"
+        android:layout_height="64dp">
+
+        <TextView
+            android:id="@+id/paytext"
             android:text="UNLOCK"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -43,6 +110,8 @@
             android:textStyle="bold"
             android:textSize="24sp"
             android:textColor="#ffffff" />
+
     </RelativeLayout>
-    
+
+
 </LinearLayout>
