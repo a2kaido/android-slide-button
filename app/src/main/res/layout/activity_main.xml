@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="jp.a2kaido.android_slide_button.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/linearLayout"
+        android:layout_margin="32dp"
+        android:background="@drawable/radius"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        tools:layout_editor_absoluteY="223dp"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/paytext"
+            android:paddingStart="36dp"
+            android:text="UNLOCK"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:background="@drawable/radius2"
+            android:id="@+id/slideView"
+            android:layout_width="72dp"
+            android:layout_height="match_parent">
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/slideText"
+            android:background="@drawable/radius2"
+            android:layout_width="72dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_alignParentStart="true"
+            android:text="＞"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+    
+</LinearLayout>
